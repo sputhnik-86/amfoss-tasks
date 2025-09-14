@@ -20,20 +20,35 @@ I navigated into the the_core directory and opened the file message_from_Them.tx
 code using echo "string" | base64 -d and got the final answer.
 
 Commands learned:
+
 cd <directory>:changes the current working directory to the specified directory
+
 ls: Lists files and directories present in current directory
-ls -a: Lists including hidden files and directories   
+
+ls -a: Lists including hidden files and directories
+   
 grep:Searches for Specific text within files
+
 grep -r "string":Search recursively within a directory
+
 cat:Open and Outputs the contents of a file
+
 chmod +x : Modifies the permissions and make the file executable.
+
 ./ : Runs the file
+
 git branch : Lists all branches
+
 git checkout <branch>:switches the branch
+
 git clone <url>: Clones the repository from the specified url
+
 git add : Stages the specified file for commit
+
 echo "string" : prints the given string
+
 nano filename : create and edit the file
+
 mkdir : creates a new directory
 
     	
