@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="c" width="300" height="300" style="border:1px solid black"></canvas>
+<p id="result">Draw a circle around the red dot!</p>
+
+<script>
+let c = document.getElementById("c");
+let ctx = c.getContext("2d");
+let drawing = false, points = [];
+
+ctx.beginPath();
+ctx.arc(150, 150, 5, 0, Math.PI*2);
+ctx.fillStyle = "red";
+ctx.fill();
+
+c.onmousedown = e => {
+  drawing = true;
+  points = [];
+  ctx.beginPath();
+  ctx.moveTo(e.offsetX, e.offsetY);
+};
+
+c.onmousemove = e => {
+  if (drawing) {
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    points.push({x: e.offsetX, y: e.offsetY});
+  }
+};
+
+c.onmouseup = () => {
+  drawing = false;
+  checkCircle();
+};
+
+function checkCircle() {
+  let cx = 150, cy = 150; // center
+  let distances = points.map(p => Math.hypot(p.x - cx, p.y - cy));
+  
+  let max = Math.max(...distances);
+  let min = Math.min(...distances);
+  let diff = max - min;
+
+  let score = Math.max(0, 100 - diff);
+  
+  document.getElementById("result").innerText = "Score: " + score.toFixed(0);
+}
+</script>
+</body>
+</html>
