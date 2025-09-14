@@ -4,6 +4,6 @@
 
 ![screenshot 3](t1.st3.jpeg)
 
-![screenshot 2](T1\_st2.png)
+![screenshot 2](T1 _st2.png)
 
-![screenshot 1](T1\_st1.png)
+![screenshot 1](T1 _st1.png)
