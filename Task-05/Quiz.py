@@ -20,7 +20,7 @@ def play_quiz():
         end = time.time()
         
         if end - start > 15:
-            print("Time up")
+            print("Time is up")
         else:
             if answer.lower() == q['correct_answer'].lower():
                 print("Correct")
