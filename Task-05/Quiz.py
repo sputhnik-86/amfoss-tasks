@@ -18,20 +18,14 @@ def play_quiz():
         start = time.time()
         answer = input("Your answer: ")
         end = time.time()
-
+        
         if end - start > 15:
-            print("Time’s up!")
+            print("Time up")
         else:
-            
             if answer.lower() == q['correct_answer'].lower():
-                print("✅ Correct!")
+                print("Correct")
                 score += 1
             else:
-                print("Wrong! Correct answer was:", q['correct_answer'])
-
+                print("Wrong , Correct answer is", q['correct_answer'])
         question_number += 1
-
-    print("Game Over! Your score:", score, "/", len(questions))
-
-if __name__ == "__main__":
-    play_quiz()
+    print("Game Over , Your score:", score, "/", len(questions))
